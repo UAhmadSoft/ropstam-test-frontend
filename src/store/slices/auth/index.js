@@ -6,7 +6,6 @@ import {
   updateMe,
   signUp,
   updatePassword,
-  getMyNotifications,
 } from './extraReducers';
 
 const initialState = {
@@ -43,9 +42,7 @@ const authSlice = createSlice({
     [getMe.rejected]: (state, { payload }) => {
       state.authenticating = false;
     },
-    [getMyNotifications.fulfilled]: (state, { payload }) => {
-      state.notifications = payload.notifications;
-    },
+ 
 
     [login.pending]: (state, { payload }) => {
       state.loading = true;

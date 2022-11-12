@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMyNotifications, login } from 'store/slices/auth/extraReducers';
+import { login } from 'store/slices/auth/extraReducers';
 
 // ----------------------------------------------------------------------
 
@@ -48,9 +48,7 @@ export default function LoginForm() {
           email: formik.values.email,
           password: formik.values.password,
         })
-      ).then(({ err }) => {
-        if (!err) dispatch(getMyNotifications());
-      });
+      )
     },
   });
 

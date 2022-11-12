@@ -14,7 +14,6 @@ SECURE_API.interceptors.request.use((req) => {
 // });
 
 export const getMe = () => SECURE_API.get('/me');
-export const getMyNotifications = () => SECURE_API.get('/notifications');
 export const updateMe = (newProfile) =>
   SECURE_API.patch('/me', {
     ...newProfile,

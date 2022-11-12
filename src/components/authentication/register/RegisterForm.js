@@ -15,7 +15,6 @@ import {
 import { LoadingButton } from '@mui/lab';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  getMyNotifications,
   login,
   signUp,
 } from 'store/slices/auth/extraReducers';
@@ -58,7 +57,6 @@ export default function RegisterForm() {
       ).then(({ err }) => {
         if (!err) {
           formik.resetForm();
-          dispatch(getMyNotifications());
         }
       });
     },

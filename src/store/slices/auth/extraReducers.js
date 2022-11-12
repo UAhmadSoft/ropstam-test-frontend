@@ -14,17 +14,7 @@ export const getMe = createAsyncThunk(
   }
 );
 
-export const getMyNotifications = createAsyncThunk(
-  '/auth/getMyNotifications',
-  async (_, { rejectWithValue }) => {
-    return userApi
-      .getMyNotifications()
-      .then((res) => ({ notifications: res.data.notifications }))
-      .catch((err) => {
-        return rejectWithValue(err);
-      });
-  }
-);
+
 
 export const updatePassword = createAsyncThunk(
   '/auth/update-password',

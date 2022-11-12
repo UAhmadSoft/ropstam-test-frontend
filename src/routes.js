@@ -6,8 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Login from 'pages/Login';
 import Register from 'pages/Register';
 import User from 'pages/Users';
-import UpdateUser from 'pages/UpdateUser';
-import NewUser from 'pages/NewUser';
 import DashboardLayout from 'components/dashboard';
 import DashboardApp from 'components/dashboard/DashboardApp';
 import { logout } from 'store/slices/auth';

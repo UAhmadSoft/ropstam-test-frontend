@@ -4,7 +4,7 @@ import ThemeConfig from './theme';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Router from 'routes';
-import { getMe, getMyNotifications } from 'store/slices/auth/extraReducers';
+import { getMe } from 'store/slices/auth/extraReducers';
 
 function App() {
   const { authenticating, isLoggedIn, user } = useSelector((st) => st.auth);
@@ -12,9 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMe()).then(({ err }) => {
-      if (!err) dispatch(getMyNotifications());
-    });
+    dispatch(getMe());
   }, []);
 
   return (
